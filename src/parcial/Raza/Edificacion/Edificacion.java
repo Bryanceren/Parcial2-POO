@@ -5,6 +5,8 @@
  */
 package parcial.Raza.Edificacion;
 
+import parcial.Raza.Recursos;
+
 /**
  *
  * @author Kriz
@@ -37,6 +39,7 @@ public class Edificacion {
         this.vida = vida;
     }
     
-    void generar(){};
+    Recursos generar(Recursos recurso){return recurso;
+    };
     
 }

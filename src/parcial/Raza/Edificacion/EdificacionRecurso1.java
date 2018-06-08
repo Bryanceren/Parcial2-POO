@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package parcial.Raza.Edificacion;
-
+import parcial.Raza.Recursos;
 /**
  *
  * @author Kriz
@@ -12,5 +12,6 @@ package parcial.Raza.Edificacion;
 public class EdificacionRecurso1 extends Edificacion{
     @Override
     public void generar(){
+        
     }
 }
