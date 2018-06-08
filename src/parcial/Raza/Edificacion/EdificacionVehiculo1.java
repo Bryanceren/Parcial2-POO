@@ -9,6 +9,8 @@ package parcial.Raza.Edificacion;
  *
  * @author Kriz
  */
-public class EdificacionVehiculo1 {
-    
+public class EdificacionVehiculo1 extends Edificacion{
+    public void generar(){
+        
+    }
 }

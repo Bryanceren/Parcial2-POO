@@ -9,6 +9,6 @@ package parcial.Raza.Edificacion;
  *
  * @author Kriz
  */
-public class CentroMando {
+public class CentroMando extends Edificacion{
     
 }

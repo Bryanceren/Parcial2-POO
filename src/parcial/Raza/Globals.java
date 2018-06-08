@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package parcial.Raza.Edificacion;
-
+package parcial.Raza;
 
 /**
  *
  * @author Kriz
  */
-public class EdificacionRecurso2 {
-    public void generar(){
-    }
+public class Globals {
+    
+    public static int fase;
+    
 }
