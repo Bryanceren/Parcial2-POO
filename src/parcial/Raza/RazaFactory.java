@@ -5,10 +5,16 @@
  */
 package parcial.Raza;
 
+import parcial.Raza.Edificacion.Edificacion;
+import parcial.Raza.Milicia.Milicia;
+import parcial.Raza.Vehiculo.Vehiculo;
+
 /**
  *
  * @author Kriz
  */
-public class RazaFactory {
-    
+public interface RazaFactory {
+    Edificacion getEdificacion(int type);
+    Vehiculo getVehiculo(int type);
+    Milicia getMilicia(int type);
 }

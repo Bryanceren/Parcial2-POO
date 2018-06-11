@@ -11,7 +11,8 @@ import parcial.Raza.Recursos;
  */
 public class EdificacionRecurso1 extends Edificacion{
     @Override
-    public void generar(){
-        
+    public Recursos generar(Recursos recursos){
+        recursos.recurso1+=1000;
+        return recursos;
     }
 }

@@ -5,12 +5,17 @@
  */
 package parcial.Raza.Edificacion;
 
+import parcial.Raza.Recursos;
+
 
 /**
  *
  * @author Kriz
  */
-public class EdificacionRecurso2 {
-    public void generar(){
+public class EdificacionRecurso2 extends Edificacion{
+    @Override
+    public Recursos generar(Recursos recursos){
+        recursos.recurso2+=1000;
+        return recursos;
     }
 }

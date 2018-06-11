@@ -9,6 +9,6 @@ package parcial.Raza.Edificacion;
  *
  * @author Kriz
  */
-public class EdificacionVehiculo2 {
+public class EdificacionVehiculo2 extends Edificacion{
     
 }
