@@ -39,7 +39,8 @@ public class Edificacion {
         this.vida = vida;
     }
     
-    Recursos generar(Recursos recurso){return recurso;
+    Recursos generar(Recursos recurso){
+        return recurso;
     };
     
 }

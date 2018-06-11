@@ -14,9 +14,6 @@ import parcial.Raza.Vehiculo.Vehiculo;
  * @author Kriz
  */
 public class EdificacionFactory implements RazaFactory{
-    
-    
-
     @Override
     public Edificacion getEdificacion(int type) {
         switch (type) {
