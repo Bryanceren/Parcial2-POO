@@ -5,7 +5,10 @@
  */
 package parcial.Raza.Edificacion;
 
+import parcial.Raza.Milicia.MiliciaFactory;
 import parcial.Raza.Recursos;
+import parcial.Raza.Vehiculo.Vehiculo;
+import parcial.Raza.Vehiculo.VehiculoFactory;
 
 
 /**
@@ -17,5 +20,14 @@ public class EdificacionRecurso2 extends Edificacion{
     public Recursos generar(Recursos recursos){
         recursos.recurso2+=1000;
         return recursos;
+    }
+    @Override
+    public MiliciaFactory crearMilicia() {
+        return null;
+    }
+
+    @Override
+    public VehiculoFactory crearVehiculo() {
+        return null;
     }
 }

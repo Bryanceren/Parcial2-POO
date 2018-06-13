@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package parcial.Raza.Edificacion;
+import parcial.Raza.Milicia.MiliciaFactory;
 import parcial.Raza.Recursos;
+import parcial.Raza.Vehiculo.Vehiculo;
+import parcial.Raza.Vehiculo.VehiculoFactory;
 /**
  *
  * @author Kriz
@@ -14,5 +17,15 @@ public class EdificacionRecurso1 extends Edificacion{
     public Recursos generar(Recursos recursos){
         recursos.recurso1+=1000;
         return recursos;
+    }
+
+    @Override
+    public MiliciaFactory crearMilicia() {
+        return null;
+    }
+
+    @Override
+    public VehiculoFactory crearVehiculo() {
+        return null;
     }
 }

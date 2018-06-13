@@ -5,17 +5,29 @@
  */
 package parcial.Raza.Edificacion;
 
+import parcial.Raza.Milicia.MiliciaFactory;
 import parcial.Raza.Recursos;
+import parcial.Raza.Vehiculo.VehiculoFactory;
 
 /**
  *
  * @author Kriz
  */
 public class CentroMando extends Edificacion{
-
+    
     @Override
     public Recursos generar(Recursos recurso) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return recurso;
+    }
+
+    @Override
+    public MiliciaFactory crearMilicia() {
+        return null;
+    }
+
+    @Override
+    public VehiculoFactory crearVehiculo() {
+        return null;
     }
     
 }

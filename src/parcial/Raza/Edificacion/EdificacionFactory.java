@@ -24,10 +24,7 @@ public class EdificacionFactory implements RazaFactory{
             case 3:
                 return new EdificacionRecurso3();
             case 4:
-                return new EdificacionVehiculo1();
-            case 5:
-                return new EdificacionVehiculo2();
-                
+                return new EdificacionVehiculo(); 
             case 6:
                 return new EdificacionMilicia();
         }

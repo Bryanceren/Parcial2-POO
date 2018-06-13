@@ -5,7 +5,9 @@
  */
 package parcial.Raza.Edificacion;
 
+import parcial.Raza.Milicia.MiliciaFactory;
 import parcial.Raza.Recursos;
+import parcial.Raza.Vehiculo.VehiculoFactory;
 
 /**
  *
@@ -40,5 +42,7 @@ public abstract class Edificacion {
     }
     
     public abstract Recursos generar(Recursos recurso);
+    public abstract MiliciaFactory crearMilicia();
+    public abstract VehiculoFactory crearVehiculo();
     
 }

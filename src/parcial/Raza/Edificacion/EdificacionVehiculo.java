@@ -5,30 +5,26 @@
  */
 package parcial.Raza.Edificacion;
 
-import parcial.Raza.Milicia.Milicia;
 import parcial.Raza.Milicia.MiliciaFactory;
 import parcial.Raza.Recursos;
-import parcial.Raza.Vehiculo.Vehiculo;
 import parcial.Raza.Vehiculo.VehiculoFactory;
 
 /**
  *
  * @author Kriz
  */
-public class EdificacionMilicia extends Edificacion{
-
+public class EdificacionVehiculo extends Edificacion{
     @Override
     public Recursos generar(Recursos recursos){
         return null;
     }
     @Override
     public MiliciaFactory crearMilicia() {
-        return new MiliciaFactory();
+        return null;
     }
 
     @Override
     public VehiculoFactory crearVehiculo() {
-        return null;
+        return new VehiculoFactory();
     }
-    
 }
