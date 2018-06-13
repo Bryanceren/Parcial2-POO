@@ -5,10 +5,17 @@
  */
 package parcial.Raza.Edificacion;
 
+import parcial.Raza.Recursos;
+
 /**
  *
  * @author Kriz
  */
 public class CentroMando extends Edificacion{
+
+    @Override
+    public Recursos generar(Recursos recurso) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

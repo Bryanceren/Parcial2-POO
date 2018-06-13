@@ -12,7 +12,7 @@ import parcial.Raza.Vehiculo.Vehiculo;
  *
  * @author Kriz
  */
-public class Milicia {
+public abstract class Milicia {
     private String nombre;
     private int vida;
     private int ataque;
@@ -45,14 +45,8 @@ public class Milicia {
         return ataque;
     }
 
-    Edificacion AtaqueEdificacion(Edificacion edificacion){
-        return edificacion;
-    };
-    Milicia AtaqueMilicia(Milicia milicia){
-        return milicia;
-    };
-    Vehiculo AtaqueVehiculo(Vehiculo vehiculo){
-        return vehiculo;
-    };
+    public abstract Edificacion AtaqueEdificacion(Edificacion edificacion);
+    public abstract Milicia AtaqueMilicia(Milicia milicia);
+    public abstract Vehiculo AtaqueVehiculo(Vehiculo vehiculo);
     
 }

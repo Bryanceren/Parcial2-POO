@@ -5,10 +5,29 @@
  */
 package parcial.Raza.Vehiculo;
 
+import parcial.Raza.Edificacion.Edificacion;
+import parcial.Raza.Milicia.Milicia;
+
 /**
  *
  * @author Kriz
  */
-public class VehiculoTipo2 {
+public class VehiculoTipo2 extends Vehiculo{
+    @Override
+    public Edificacion AtaqueEdificacion(Edificacion edificacion){
+        edificacion.setVida(edificacion.getVida()-VehiculoTipo2.this.getAtaque());        
+        return edificacion;
+    };
     
+    @Override
+    public Milicia AtaqueMilicia(Milicia milicia){
+        milicia.setVida(milicia.getVida()-VehiculoTipo2.this.getAtaque());
+        return milicia;
+    };
+    
+    @Override
+    public Vehiculo AtaqueVehiculo(Vehiculo vehiculo){
+        vehiculo.setVida(vehiculo.getVida()-VehiculoTipo2.this.getAtaque());
+        return vehiculo;
+    };
 }

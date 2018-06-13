@@ -11,7 +11,7 @@ import parcial.Raza.Recursos;
  *
  * @author Kriz
  */
-public class Edificacion {
+public abstract class Edificacion {
     private String nombre;
     private int vida;
  
@@ -39,8 +39,6 @@ public class Edificacion {
         this.vida = vida;
     }
     
-    Recursos generar(Recursos recurso){
-        return recurso;
-    };
+    public abstract Recursos generar(Recursos recurso);
     
 }
