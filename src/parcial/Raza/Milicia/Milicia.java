@@ -44,6 +44,9 @@ public abstract class Milicia {
     public int getAtaque() {
         return ataque;
     }
+    public void setAtaque(){
+        this.ataque=ataque;
+    }
 
     public abstract Edificacion AtaqueEdificacion(Edificacion edificacion);
     public abstract Milicia AtaqueMilicia(Milicia milicia);

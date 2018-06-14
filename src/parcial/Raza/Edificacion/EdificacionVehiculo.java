@@ -22,7 +22,7 @@ public class EdificacionVehiculo extends Edificacion{
     public MiliciaFactory crearMilicia() {
         return null;
     }
-
+    
     @Override
     public VehiculoFactory crearVehiculo() {
         return new VehiculoFactory();

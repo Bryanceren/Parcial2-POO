@@ -10,17 +10,19 @@ import parcial.Raza.Recursos;
 import parcial.Raza.Vehiculo.Vehiculo;
 import parcial.Raza.Vehiculo.VehiculoFactory;
 
-
 /**
  *
  * @author Kriz
  */
-public class EdificacionRecurso2 extends Edificacion{
+public class EdificacionRecurso2 extends Edificacion {
+
     @Override
-    public Recursos generar(Recursos recursos){
-        recursos.recurso2+=1000;
+    public Recursos generar(Recursos recursos) {
+        System.out.println("se annadio 1000 de recurso 2");
+        recursos.recurso2 += 1000;
         return recursos;
     }
+
     @Override
     public MiliciaFactory crearMilicia() {
         return null;

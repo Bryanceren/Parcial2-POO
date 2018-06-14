@@ -16,6 +16,7 @@ public class EdificacionRecurso1 extends Edificacion{
     @Override
     public Recursos generar(Recursos recursos){
         recursos.recurso1+=1000;
+        System.out.println("se annadio 1000 de recurso 1");
         return recursos;
     }
 

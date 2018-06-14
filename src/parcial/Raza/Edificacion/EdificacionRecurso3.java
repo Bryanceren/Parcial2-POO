@@ -17,6 +17,7 @@ import parcial.Raza.Vehiculo.VehiculoFactory;
 public class EdificacionRecurso3 extends Edificacion{
     @Override
     public Recursos generar(Recursos recursos){
+        System.out.println("se annadio 1000 de recurso 3");
         recursos.recurso3+=1000;
         return recursos;
     }
