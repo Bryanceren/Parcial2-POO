@@ -14,46 +14,50 @@ import parcial.Raza.Recursos;
  */
 public class InframundoBuilder extends razaBuilder{
     @Override
-    public void buildCentroMando() {
+    public Edificacion buildCentroMando() {
         Recursos recursosiniciales=new Recursos(10000,5000,3000);
         Edificacion centro=raza.getEdificacion(6);
         centro.setNombre("Centro Oscuro");
         centro.setVida(10000);
         centro.generar(recursosiniciales);
+        return centro;
     }
 
     @Override
-    public void buildEdificacionRecurso1(Recursos recursos) {
+    public Edificacion buildEdificacionRecurso1(Recursos recursos) {
         recursos.setRecurso1(recursos.getRecurso1()-1000);
         recursos.setRecurso2(recursos.getRecurso2()-1000);
         Edificacion recursos1=raza.getEdificacion(1);
         recursos1.setNombre("agujero");
         recursos1.setVida(2000);
-        recursos1.generar(recursos);        
+        recursos1.generar(recursos);  
+        return recursos1;
     }
     
     @Override
-    public void buildEdificacionRecurso2(Recursos recursos) {
+    public Edificacion buildEdificacionRecurso2(Recursos recursos) {
         recursos.setRecurso1(recursos.getRecurso1()-2000);
         recursos.setRecurso2(recursos.getRecurso2()-1000);
         Edificacion recursos2=raza.getEdificacion(2);
         recursos2.setNombre("casa de brujos");
         recursos2.setVida(3000);
-        recursos2.generar(recursos);        
+        recursos2.generar(recursos); 
+        return recursos2;
     }
     
     @Override
-    public void buildEdificacionRecurso3(Recursos recursos) {
+    public Edificacion buildEdificacionRecurso3(Recursos recursos) {
         recursos.setRecurso1(recursos.getRecurso1()-1500);
         recursos.setRecurso2(recursos.getRecurso2()-1200);
         recursos.setRecurso3(recursos.getRecurso3()-500);
         Edificacion recursos3=raza.getEdificacion(3);
         recursos3.setNombre("pozo de sangre");
         recursos3.setVida(2500);
-        recursos3.generar(recursos);        
+        recursos3.generar(recursos);
+        return recursos3;
     }
     @Override
-    public void buildEdificacionVehiculo(Recursos recursos) {
+    public Edificacion buildEdificacionVehiculo(Recursos recursos) {
         recursos.setRecurso1(recursos.getRecurso1()-2000);
         recursos.setRecurso2(recursos.getRecurso2()-1500);
         recursos.setRecurso3(recursos.getRecurso3()-600);
@@ -63,16 +67,17 @@ public class InframundoBuilder extends razaBuilder{
 //        VehiculoFactory vehiculosf=vehiculos.crearVehiculo();
 //        System.out.println("tipo de vehiculo? \npress 1 para dragon, press 2 para tigre");
 //        vehiculosf.getVehiculo(opc.nextInt());
-        
+        return vehiculos;
         
     }
     @Override
-    public void buildEdificacionMilicia(Recursos recursos) {
+    public Edificacion buildEdificacionMilicia(Recursos recursos) {
         recursos.setRecurso1(recursos.getRecurso1()-3000);
         recursos.setRecurso2(recursos.getRecurso2()-2000);
         recursos.setRecurso3(recursos.getRecurso3()-700);
         Edificacion milicia=raza.getEdificacion(5);
         milicia.setNombre("cementerio");
-        milicia.setVida(1000);       
+        milicia.setVida(1000); 
+        return milicia;
     }
 }
