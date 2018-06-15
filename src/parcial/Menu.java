@@ -6,6 +6,7 @@
 package parcial;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 import parcial.Raza.Edificacion.Edificacion;
 import parcial.Raza.Milicia.Milicia;
@@ -85,57 +86,79 @@ public class Menu {
     }
 
     public ArrayList<Edificacion> atacarEdificacionVehiculo(ArrayList<Edificacion> edificaciones, Vehiculo vehiculo, String edificacionataque) {
-        for (Edificacion edificacion : edificaciones) {
+
+        Iterator<Edificacion> it = edificaciones.iterator();
+
+        while (it.hasNext()) {
+
+            Edificacion edificacion = it.next();
             if (edificacion.getNombre().equals(edificacionataque)) {
                 vehiculo.AtaqueEdificacion(edificacion);
                 System.out.println("Realizando ataque!!! qwjdfgqwqf1");
             } else {
-                System.out.println("");
+                if (edificacion.getVida() < 0) {
+                    edificaciones.remove(edificacion);
+                }
             }
-            if (edificacion.getVida() < 0) {
-                edificaciones.remove(edificacion);
-            }
+
         }
         return edificaciones;
     }
 
     public ArrayList<Edificacion> atacarEdificacionMilicia(ArrayList<Edificacion> edificaciones, Milicia milicia, String edificacionataque) {
-        for (Edificacion edificacion : edificaciones) {
+        Iterator<Edificacion> it = edificaciones.iterator();
+
+        while (it.hasNext()) {
+
+            Edificacion edificacion = it.next();
             if (edificacion.getNombre().equals(edificacionataque)) {
                 milicia.AtaqueEdificacion(edificacion);
                 System.out.println("Realizando ataque!!! qwjdfgqwqf1");
-            } else {
-                System.out.println("");
-            }
+            }else{
             if (edificacion.getVida() < 0) {
                 edificaciones.remove(edificacion);
+            }
             }
         }
         return edificaciones;
     }
 
     public ArrayList<Milicia> atacarMiliciaVehiculo(ArrayList<Milicia> milicias, Vehiculo vehiculo, String miliciaataque) {
-        for (Milicia milicia : milicias) {
+        Iterator<Milicia> it = milicias.iterator();
+
+        while (it.hasNext()) {
+
+            Milicia milicia = it.next();
             if (milicia.getNombre().equals(miliciaataque)) {
                 vehiculo.AtaqueMilicia(milicia);
                 System.out.println("Realizando ataque!!! qwjdfgqwqf1");
-            } else {
-                System.out.println("");
+            }else{
+            if (milicia.getVida() < 0) {
+                milicias.remove(milicia);
+            }
             }
         }
         return milicias;
     }
 
     public ArrayList<Vehiculo> atacarVehiculoMilicia(ArrayList<Vehiculo> vehiculos, Milicia milicia, String vehiculoataque) {
-        for (Vehiculo vehiculo : vehiculos) {
-            if (vehiculo.getNombre().equals(vehiculoataque)) {
+
+        Iterator<Vehiculo> it = vehiculos.iterator();
+
+        while (it.hasNext()) {
+
+            Vehiculo vehiculo = it.next();
+            if (milicia.getNombre().equals(vehiculoataque)) {
                 milicia.AtaqueVehiculo(vehiculo);
-                System.out.println("Realizando ataque!!! qwjdfgqwqf1");
-            } else {
-                System.out.println("");
+                System.out.println("Realizando ataque!!! qwjdfgqwqdwqf1");
+            }else{
+            if (vehiculo.getVida() < 0) {
+                vehiculos.remove(vehiculo);
+            }
             }
         }
         return vehiculos;
+
     }
 
     public void Inicio() {
@@ -153,15 +176,15 @@ public class Menu {
 
         String[] jugadores = {Jugador1, Jugador2};
         Recursos[] recursosjugadores = new Recursos[2];
-        ArrayList<Edificacion> edificaciones1 = new ArrayList<Edificacion>();
-        ArrayList<Edificacion> edificaciones2 = new ArrayList<Edificacion>();
-        ArrayList<Edificacion> edificaciones3 = new ArrayList<Edificacion>();
-        ArrayList<Milicia> milicia1 = new ArrayList<Milicia>();
-        ArrayList<Milicia> milicia2 = new ArrayList<Milicia>();
-        ArrayList<Milicia> milicia3 = new ArrayList<Milicia>();
-        ArrayList<Vehiculo> vehiculos1 = new ArrayList<Vehiculo>();
-        ArrayList<Vehiculo> vehiculos2 = new ArrayList<Vehiculo>();
-        ArrayList<Vehiculo> vehiculos3 = new ArrayList<Vehiculo>();
+        ArrayList<Edificacion> edificaciones1 = new ArrayList<>();
+        ArrayList<Edificacion> edificaciones2 = new ArrayList<>();
+        ArrayList<Edificacion> edificaciones3 = new ArrayList<>();
+        ArrayList<Milicia> milicia1 = new ArrayList<>();
+        ArrayList<Milicia> milicia2 = new ArrayList<>();
+        ArrayList<Milicia> milicia3 = new ArrayList<>();
+        ArrayList<Vehiculo> vehiculos1 = new ArrayList<>();
+        ArrayList<Vehiculo> vehiculos2 = new ArrayList<>();
+        ArrayList<Vehiculo> vehiculos3 = new ArrayList<>();
 
         Recursos recursosiniciales = new Recursos(10000, 5000, 3000);
 
@@ -613,7 +636,7 @@ public class Menu {
                 }
 
             }
-            
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////raza3           
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////raza3           
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////raza3           
@@ -821,32 +844,30 @@ public class Menu {
                 }
 
             }
-            
+
             if (flag == true) {
                 flag = false;
             } else {
-                flag=true;
+                flag = true;
             }
-            if(opciones[j]==1){
-                if (edificaciones1.isEmpty()){
-                    System.out.println("el jugador"+jugadores[j]+" fue el perdedor");
-                    jugador1=false;                  
-                }
-             }
-            if(opciones[j]==2){
-                if (edificaciones2.isEmpty()){
-                    System.out.println("el jugador"+jugadores[j]+" fue el perdedor");
-                    jugador1=false;                  
+            if (opciones[j] == 1) {
+                if (edificaciones1.isEmpty()) {
+                    System.out.println("el jugador" + jugadores[j] + " fue el perdedor");
+                    jugador1 = false;
                 }
             }
-            if(opciones[j]==3){
-                if (edificaciones3.isEmpty()){
-                    System.out.println("el jugador"+jugadores[j]+" fue el perdedor");
-                    jugador1=false;                  
+            if (opciones[j] == 2) {
+                if (edificaciones2.isEmpty()) {
+                    System.out.println("el jugador" + jugadores[j] + " fue el perdedor");
+                    jugador1 = false;
                 }
             }
-            
-            
+            if (opciones[j] == 3) {
+                if (edificaciones3.isEmpty()) {
+                    System.out.println("el jugador" + jugadores[j] + " fue el perdedor");
+                    jugador1 = false;
+                }
+            }
 
         }
 
