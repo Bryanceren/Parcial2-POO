@@ -13,11 +13,15 @@ import parcial.Raza.Vehiculo.Vehiculo;
  * @author Kriz
  */
 public abstract class Milicia {
+
     private String nombre;
     private int vida;
     private int ataque;
-    
-    Milicia(){};
+
+    Milicia() {
+    }
+
+    ;
 
     public Milicia(String nombre, int vida, int ataque) {
         this.nombre = nombre;
@@ -41,19 +45,20 @@ public abstract class Milicia {
         this.vida = vida;
     }
 
+    public void setAtaque(int ataque) {
+        this.ataque = ataque;
+    }
+
     public int getAtaque() {
         return ataque;
     }
-    public void setAtaque(){
-        this.ataque=ataque;
-    }
 
     public abstract Edificacion AtaqueEdificacion(Edificacion edificacion);
+
     public abstract Milicia AtaqueMilicia(Milicia milicia);
+
     public abstract Vehiculo AtaqueVehiculo(Vehiculo vehiculo);
 
-    public void setAtaque(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
+
 }
