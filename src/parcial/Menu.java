@@ -86,7 +86,7 @@ public class Menu {
 
     public ArrayList<Edificacion> atacarEdificacionVehiculo(ArrayList<Edificacion> edificaciones, Vehiculo vehiculo, String edificacionataque) {
         for (Edificacion edificacion : edificaciones) {
-            if (edificacion.getNombre() == edificacionataque) {
+            if (edificacion.getNombre().equals(edificacionataque)) {
                 vehiculo.AtaqueEdificacion(edificacion);
                 System.out.println("Realizando ataque!!! qwjdfgqwqf1");
             } else {
@@ -101,7 +101,7 @@ public class Menu {
 
     public ArrayList<Edificacion> atacarEdificacionMilicia(ArrayList<Edificacion> edificaciones, Milicia milicia, String edificacionataque) {
         for (Edificacion edificacion : edificaciones) {
-            if (edificacion.getNombre() == edificacionataque) {
+            if (edificacion.getNombre().equals(edificacionataque)) {
                 milicia.AtaqueEdificacion(edificacion);
                 System.out.println("Realizando ataque!!! qwjdfgqwqf1");
             } else {
@@ -116,7 +116,7 @@ public class Menu {
 
     public ArrayList<Milicia> atacarMiliciaVehiculo(ArrayList<Milicia> milicias, Vehiculo vehiculo, String miliciaataque) {
         for (Milicia milicia : milicias) {
-            if (milicia.getNombre() == miliciaataque) {
+            if (milicia.getNombre().equals(miliciaataque)) {
                 vehiculo.AtaqueMilicia(milicia);
                 System.out.println("Realizando ataque!!! qwjdfgqwqf1");
             } else {
@@ -128,7 +128,7 @@ public class Menu {
 
     public ArrayList<Vehiculo> atacarVehiculoMilicia(ArrayList<Vehiculo> vehiculos, Milicia milicia, String vehiculoataque) {
         for (Vehiculo vehiculo : vehiculos) {
-            if (vehiculo.getNombre() == vehiculoataque) {
+            if (vehiculo.getNombre().equals(vehiculoataque)) {
                 milicia.AtaqueVehiculo(vehiculo);
                 System.out.println("Realizando ataque!!! qwjdfgqwqf1");
             } else {
@@ -144,6 +144,7 @@ public class Menu {
         jugador1 = true;
         jugador2 = true;
         Scanner leer = new Scanner(System.in);
+        Scanner leer2 = new Scanner(System.in);
         System.out.println("Bienvenido a Bryan's World!!");
         System.out.println("Ingrese su nombre jugardor1: ");
         Jugador1 = leer.nextLine();
@@ -302,7 +303,7 @@ public class Menu {
 
                                 if (g == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionVehiculo(edificaciones2, dragon, nombre);
                                     atacarMiliciaVehiculo(milicia2, dragon, nombre);
                                     atacarEdificacionVehiculo(edificaciones3, dragon, nombre);
@@ -330,7 +331,7 @@ public class Menu {
 
                                 if (y == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionVehiculo(edificaciones2, tigre, nombre);
                                     atacarMiliciaVehiculo(milicia2, tigre, nombre);
                                     atacarEdificacionVehiculo(edificaciones3, tigre, nombre);
@@ -371,7 +372,7 @@ public class Menu {
 
                                 if (g == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionMilicia(edificaciones2, ninja, nombre);
                                     atacarVehiculoMilicia(vehiculos2, ninja, nombre);
                                     atacarEdificacionMilicia(edificaciones3, ninja, nombre);
@@ -400,7 +401,7 @@ public class Menu {
 
                                 if (w == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionMilicia(edificaciones2, samurai, nombre);
                                     atacarVehiculoMilicia(vehiculos2, samurai, nombre);
                                     atacarEdificacionMilicia(edificaciones3, samurai, nombre);
@@ -497,7 +498,7 @@ public class Menu {
 
                                 if (g == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionVehiculo(edificaciones2, gargola, nombre);
                                     atacarMiliciaVehiculo(milicia2, gargola, nombre);
                                     atacarEdificacionVehiculo(edificaciones3, gargola, nombre);
@@ -526,7 +527,7 @@ public class Menu {
 
                                 if (y == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    nombre = leer.nextLine();
+                                    nombre = leer2.nextLine();
                                     atacarEdificacionVehiculo(edificaciones2, demonio, nombre);
                                     atacarMiliciaVehiculo(milicia2, demonio, nombre);
                                     atacarEdificacionVehiculo(edificaciones3, demonio, nombre);
@@ -534,7 +535,7 @@ public class Menu {
                                 } else {
                                     break;
                                 }
-                                
+                                break;
                         }
                         break;
                     case 5:
@@ -567,7 +568,7 @@ public class Menu {
 
                                 if (g == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionMilicia(edificaciones2, esqueleto, nombre);
                                     atacarVehiculoMilicia(vehiculos2, esqueleto, nombre);
                                     atacarEdificacionMilicia(edificaciones3, esqueleto, nombre);
@@ -596,7 +597,7 @@ public class Menu {
 
                                 if (w == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionMilicia(edificaciones2, brujo, nombre);
                                     atacarVehiculoMilicia(vehiculos2, brujo, nombre);
                                     atacarEdificacionMilicia(edificaciones3, brujo, nombre);
@@ -706,7 +707,7 @@ public class Menu {
 
                                 if (g == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionVehiculo(edificaciones2, tanque, nombre);
                                     atacarMiliciaVehiculo(milicia2, tanque, nombre);
                                     atacarEdificacionVehiculo(edificaciones3, tanque, nombre);
@@ -734,7 +735,7 @@ public class Menu {
 
                                 if (y == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionVehiculo(edificaciones2, dron, nombre);
                                     atacarMiliciaVehiculo(milicia2, dron, nombre);
                                     atacarEdificacionVehiculo(edificaciones3, dron, nombre);
@@ -775,7 +776,7 @@ public class Menu {
 
                                 if (g == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionMilicia(edificaciones2, soldado, nombre);
                                     atacarVehiculoMilicia(vehiculos2, soldado, nombre);
                                     atacarEdificacionMilicia(edificaciones3, soldado, nombre);
@@ -804,7 +805,7 @@ public class Menu {
 
                                 if (w == 1) {
                                     System.out.println("Escriba el nombre de lo que quiere atacar(mostrara mensaje de ataque si es exitoso)");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer2.nextLine();
                                     atacarEdificacionMilicia(edificaciones2, bombardero, nombre);
                                     atacarVehiculoMilicia(vehiculos2, bombardero, nombre);
                                     atacarEdificacionMilicia(edificaciones3, bombardero, nombre);
