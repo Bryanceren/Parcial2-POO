@@ -14,7 +14,7 @@ import parcial.Raza.Recursos;
  * @author Kriz
  */
 public class CreadorRaza {
-    private razaBuilder razaBuilder;
+    public razaBuilder razaBuilder;
     
     public Edificacion construirCentroMando(){
         return razaBuilder.buildCentroMando();

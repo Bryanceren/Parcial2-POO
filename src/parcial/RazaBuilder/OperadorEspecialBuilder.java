@@ -6,6 +6,7 @@
 package parcial.RazaBuilder;
 
 import parcial.Raza.Edificacion.Edificacion;
+import parcial.Raza.RazaProducer;
 import parcial.Raza.Recursos;
 
 /**
@@ -17,6 +18,7 @@ public class OperadorEspecialBuilder extends razaBuilder {
     @Override
     public Edificacion buildCentroMando() {
         Recursos recursosiniciales = new Recursos(10000, 5000, 3000);
+        raza=RazaProducer.getFactory(1);
         Edificacion centro = raza.getEdificacion(6);
         centro.setNombre("centro de mando");
         centro.setVida(10000);
@@ -28,6 +30,7 @@ public class OperadorEspecialBuilder extends razaBuilder {
     public Edificacion buildEdificacionRecurso1(Recursos recursos) {
         recursos.setRecurso1(recursos.getRecurso1() - 1000);
         recursos.setRecurso2(recursos.getRecurso2() - 1000);
+        raza=RazaProducer.getFactory(1);
         Edificacion recursos1 = raza.getEdificacion(1);
         recursos1.setNombre("granja");
         recursos1.setVida(4000);
@@ -39,6 +42,7 @@ public class OperadorEspecialBuilder extends razaBuilder {
     public Edificacion buildEdificacionRecurso2(Recursos recursos) {
         recursos.setRecurso1(recursos.getRecurso1() - 2000);
         recursos.setRecurso2(recursos.getRecurso2() - 1000);
+        raza=RazaProducer.getFactory(1);
         Edificacion recursos2 = raza.getEdificacion(2);
         recursos2.setNombre("armeria");
         recursos2.setVida(6000);
@@ -51,6 +55,7 @@ public class OperadorEspecialBuilder extends razaBuilder {
         recursos.setRecurso1(recursos.getRecurso1() - 1500);
         recursos.setRecurso2(recursos.getRecurso2() - 1200);
         recursos.setRecurso3(recursos.getRecurso3() - 500);
+        raza=RazaProducer.getFactory(1);
         Edificacion recursos3 = raza.getEdificacion(3);
         recursos3.setNombre("fabrica");
         recursos3.setVida(5000);
@@ -63,6 +68,7 @@ public class OperadorEspecialBuilder extends razaBuilder {
         recursos.setRecurso1(recursos.getRecurso1() - 2000);
         recursos.setRecurso2(recursos.getRecurso2() - 1500);
         recursos.setRecurso3(recursos.getRecurso3() - 600);
+        raza=RazaProducer.getFactory(1);
         Edificacion vehiculos = raza.getEdificacion(4);
         vehiculos.setNombre("taller");
         vehiculos.setVida(6000);
@@ -78,6 +84,7 @@ public class OperadorEspecialBuilder extends razaBuilder {
         recursos.setRecurso1(recursos.getRecurso1() - 3000);
         recursos.setRecurso2(recursos.getRecurso2() - 2000);
         recursos.setRecurso3(recursos.getRecurso3() - 700);
+        raza=RazaProducer.getFactory(1);
         Edificacion milicia = raza.getEdificacion(5);
         milicia.setNombre("ayuntamiento");
         milicia.setVida(3000);

@@ -51,5 +51,9 @@ public abstract class Milicia {
     public abstract Edificacion AtaqueEdificacion(Edificacion edificacion);
     public abstract Milicia AtaqueMilicia(Milicia milicia);
     public abstract Vehiculo AtaqueVehiculo(Vehiculo vehiculo);
+
+    public void setAtaque(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -45,6 +45,9 @@ public abstract class Vehiculo {
     public int getAtaque() {
         return ataque;
     }
+    public void setAtaque(int ataque){
+        this.ataque=ataque;
+    }
     public abstract Edificacion AtaqueEdificacion(Edificacion edificacion);
     public abstract Milicia AtaqueMilicia(Milicia milicia);
     public abstract Vehiculo AtaqueVehiculo(Vehiculo vehiculo);
